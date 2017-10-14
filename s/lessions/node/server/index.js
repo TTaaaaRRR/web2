@@ -1,6 +1,6 @@
 var express = require("express");
 var app = express();
 
-app.get("/test", function(request, response){
+app.get("/", function(request, response){
     response.send("Hello test!");
 });
