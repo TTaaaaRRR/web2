@@ -1,16 +1,19 @@
 var vm = new Vue({
 	el: "#app",
 	data: {
-        thing: "",
-        publkey: "",
-        txt: "lolo"
+       a: 1,
+       b: 0,
+       c: 0
     },
     methods: {
-        encr: function(){
-            if(this.publkey != ""){
-                this.txt = cryptico.encrypt(this.thing, this.publkey).cipher;
-
-            }
+        drawplot: function(){
+            functionPlot({
+                target: "#plot",
+                data: [{
+                    fn: "x * x + " + this.b + " * x + " + this.c 
+                }],
+                grid: true
+            });
         }
     }
 });
